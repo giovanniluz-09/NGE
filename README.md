@@ -1,4 +1,4 @@
-![Projeto App NGE Transportes - Logo](/assets/README.MD.png)
+![Projeto App NGE Transportes - Logo](https://img.freepik.com/fotos-gratis/homem-usando-laptop-a-noite-top-view-banner-web-com-espaco-de-copia_169016-53607.jpg?t=st=1743643019~exp=1743646619~hmac=24ca1e394d4be9b691d09ceb38d71e90223464745f2cc599c8c38f32d3489e43&w=1380)
 
 # Sejam Bem-vindos!
 

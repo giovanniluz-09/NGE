@@ -16,6 +16,7 @@ const styles = {
     logo: {
         width: 176,
         height: 80,
+        alignSelf: 'center',
     },
     subtitle: {
         color: '#fff',

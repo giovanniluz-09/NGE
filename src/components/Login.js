@@ -5,7 +5,7 @@ export default function Login() {
     <View>
       <TextInput style={styles.input} placeholder="Email" placeholderTextColor={"white"} />
       <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"white"} />
-        <TouchableOpacity style={styles.button}><Text>Login</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button}><Text style={styles.text}>Login</Text></TouchableOpacity>
     </View>
   );
 }
@@ -33,4 +33,8 @@ const styles = {
         color: '#000',
         backgroundColor: '#fff',
     },
+
+    text: {
+      fontSize: 25,
+    }
 }

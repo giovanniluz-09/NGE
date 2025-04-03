@@ -14,8 +14,8 @@ export default function Logo() {
 
 const styles = {
     logo: {
-        width: 174,
-        height: 77,
+        width: 176,
+        height: 80,
     },
     subtitle: {
         color: '#fff',

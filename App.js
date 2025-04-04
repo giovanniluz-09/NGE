@@ -6,7 +6,7 @@ import SignUp from './src/components/SignUp.js';
 export default function App() {
   return (
     <View style={styles.container}>
-      <SignUp />
+      <Login />
       <StatusBar style="light" />
     </View>
   );

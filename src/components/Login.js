@@ -1,6 +1,5 @@
-import { TextInput, View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { TextInput, View, StyleSheet, Text, TouchableOpacity, ScrollView } from "react-native";
 import Logo from "./Logo.js";
-
 
 export default function Login() {
   return (
@@ -9,10 +8,11 @@ export default function Login() {
       <TextInput style={styles.input} placeholder="Email" placeholderTextColor={"white"} />
       <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"white"} />
         <TouchableOpacity style={styles.login}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.cadastrar}><Text style={styles.textCadastrar}>Cadastrar</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.cadastrar}> <Text style={styles.textCadastrar}>Cadastrar</Text> </TouchableOpacity>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
     input: {
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
         marginTop: 5,
         justifyContent: 'center',
         alignItems: 'center',
+        margin: 5,
     },
     textLogin: {
       fontSize: 25,

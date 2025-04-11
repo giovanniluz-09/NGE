@@ -1,20 +1,29 @@
 import { TextInput, View, StyleSheet, Text, TouchableOpacity, ScrollView } from "react-native";
+import React from 'react';
 import Logo from "./Logo.js";
 
-export default function Login() {
+export default function Login({ navigation }) {
   return (
-    <View>
+    <View style={styles.container}>
       <Logo />
       <TextInput style={styles.input} placeholder="Email" placeholderTextColor={"white"} />
       <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"white"} />
-        <TouchableOpacity style={styles.login}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.cadastrar}> <Text style={styles.textCadastrar}>Cadastrar</Text> </TouchableOpacity>
+        <TouchableOpacity style={styles.login}>Login</TouchableOpacity>
+        <TouchableOpacity style={styles.cadastrar}>Cadastrar</TouchableOpacity>
     </View>
   );
 }
+/* <TouchableOpacity style={styles.login}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
+<TouchableOpacity style={styles.cadastrar}> <Text style={styles.textCadastrar}>Cadastrar</Text> </TouchableOpacity> */
 
 
 const styles = StyleSheet.create({
+    container: {
+      backgroundColor: '0C1E34',
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },  
     input: {
         padding: 16,
         width: 300,

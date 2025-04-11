@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import Logo from './Logo.js';
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
     return (
     <View>
     <Logo />

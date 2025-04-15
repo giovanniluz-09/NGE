@@ -1,29 +1,30 @@
-import { TextInput, View, StyleSheet, Text, TouchableOpacity, ScrollView } from "react-native";
+import { TextInput, View, StyleSheet, Text, TouchableOpacity, ScrollView, Button } from "react-native";
 import React from 'react';
 import Logo from "./Logo.js";
 
 export default function Login({ navigation }) {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Logo />
       <TextInput style={styles.input} placeholder="Email" placeholderTextColor={"white"} />
       <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"white"} />
-        <TouchableOpacity style={styles.login}>Login</TouchableOpacity>
-        <TouchableOpacity style={styles.cadastrar}>Cadastrar</TouchableOpacity>
-    </View>
+  <TouchableOpacity style={styles.login}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
+  <Button style={styles.button} title="Cadastrar" onPress={() => navigation.navigate('SignUp')} />
+    </ScrollView>
   );
 }
-/* <TouchableOpacity style={styles.login}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
-<TouchableOpacity style={styles.cadastrar}> <Text style={styles.textCadastrar}>Cadastrar</Text> </TouchableOpacity> */
-
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '0C1E34',
+      backgroundColor: '#0C1E34',
       flex: 1,
-      justifyContent: 'center',
       alignItems: 'center',
+      justifyContent: 'center'
     },  
+    button: {
+      background: '#0C1E34',
+      margin: 20,
+    },
     input: {
         padding: 16,
         width: 300,

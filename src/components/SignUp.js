@@ -1,9 +1,9 @@
-import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Button } from 'react-native';
 import Logo from './Logo.js';
 
 export default function SignUp({ navigation }) {
     return (
-    <View>
+    <ScrollView contentContainerStyle={styles.container}>
     <Logo />
     <Text style={styles.title}>Criar minha Conta</Text>
     <TextInput style={styles.input} placeholder="Digite seu Nome *" placeholderTextColor={"white"} />
@@ -11,12 +11,22 @@ export default function SignUp({ navigation }) {
     <TextInput style={styles.input} placeholder="Digite sua Senha *" placeholderTextColor={"white"} />
     <TextInput style={styles.input} placeholder="Confirme sua Senha *" placeholderTextColor={"white"} />
         <TouchableOpacity style={styles.cadastro}><Text style={styles.textCadastro}>Cadastrar</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.login}><Text style={styles.textLogin}>Ja possui uma conta?</Text></TouchableOpacity>
-    </View>
+        <Button style={styles.button} title="Já Possui uma conta?" onPress={() => navigation.navigate('Login')} />
+    </ScrollView>
     );
  }
 
 const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#0C1E34',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+      },  
+      button: {
+        backgroundColor: 'none',
+        margin: 20,
+      }, 
     title: {
         color: '#fff',
         fontSize: 30,

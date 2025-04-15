@@ -1,7 +1,10 @@
 import { Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Button } from 'react-native';
 import Logo from './Logo.js';
 
+
 export default function SignUp({ navigation }) {
+
+    //Adição dos botões para navegação entre telas, sendo utilizado o "TouchableOpacity" para colocar o "OnPress" - Nicolas Santos
     return (
     <ScrollView contentContainerStyle={styles.container}>
     <Logo />
@@ -10,8 +13,8 @@ export default function SignUp({ navigation }) {
     <TextInput style={styles.input} placeholder="Digite seu Email *" placeholderTextColor={"white"} />
     <TextInput style={styles.input} placeholder="Digite sua Senha *" placeholderTextColor={"white"} />
     <TextInput style={styles.input} placeholder="Confirme sua Senha *" placeholderTextColor={"white"} />
-        <TouchableOpacity style={styles.cadastro}><Text style={styles.textCadastro}>Cadastrar</Text></TouchableOpacity>
-        <Button style={styles.button} title="Já Possui uma conta?" onPress={() => navigation.navigate('Login')} />
+    <TouchableOpacity style={styles.cadastro} ><Text style={styles.textCadastro}>Cadastrar</Text></TouchableOpacity>
+    <Text style={styles.acount} onPress={() => navigation.navigate('Login')}>Já possui uma conta?</Text>
     </ScrollView>
     );
  }
@@ -51,7 +54,7 @@ const styles = StyleSheet.create({
         width: 200,
         height: 40,
         borderRadius: 50,
-        marginTop: 30,
+        marginTop: 20,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
@@ -72,4 +75,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color : '#fff',
     },
+    acount: {
+        fontSize: 16,
+        padding: 10,
+        color: '#fff'
+    }
 });

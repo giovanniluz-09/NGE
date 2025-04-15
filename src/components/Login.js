@@ -1,16 +1,22 @@
-import { TextInput, View, StyleSheet, Text, TouchableOpacity, ScrollView, Button } from "react-native";
+import { TextInput, StyleSheet, Text, TouchableOpacity, ScrollView, KeyboardAvoidingView, Animated, useState, useEffect } from "react-native";
 import React from 'react';
 import Logo from "./Logo.js";
 
+
 export default function Login({ navigation }) {
+
+  const [offset]  = useState(new Animated.ValueXY({x: 0, y: 80}));
+  
+//Adição dos botões para navegação entre telas, sendo utilizado o "TouchableOpacity" para colocar o "OnPress" - Nicolas Santos
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <Animated.ScrollView contentContainerStyle={styles.container}>
+      <KeyboardAvoidingView>
       <Logo />
+      </KeyboardAvoidingView>
       <TextInput style={styles.input} placeholder="Email" placeholderTextColor={"white"} />
       <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"white"} />
-  <TouchableOpacity style={styles.login}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
-  <Button style={styles.button} title="Cadastrar" onPress={() => navigation.navigate('SignUp')} />
-    </ScrollView>
+      <TouchableOpacity style={styles.login} onPress={() => navigation.navigate('SignUp')}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
+    </Animated.ScrollView>
   );
 }
 
@@ -19,9 +25,9 @@ const styles = StyleSheet.create({
       backgroundColor: '#0C1E34',
       flex: 1,
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
     },  
-    button: {
+      button: {
       background: '#0C1E34',
       margin: 20,
     },

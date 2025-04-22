@@ -5,7 +5,7 @@ import Logo from "./Logo.js";
 
 export default function Login({ navigation }) {
 
-  const [offset]  = useState(new Animated.ValueXY({x: 0, y: 80}));
+
   
 //Adição dos botões para navegação entre telas, sendo utilizado o "TouchableOpacity" para colocar o "OnPress" - Nicolas Santos
   return (
@@ -15,7 +15,8 @@ export default function Login({ navigation }) {
       </KeyboardAvoidingView>
       <TextInput style={styles.input} placeholder="Email" placeholderTextColor={"white"} />
       <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"white"} />
-      <TouchableOpacity style={styles.login} onPress={() => navigation.navigate('SignUp')}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.login} onPress={() => navigation.navigate('Card')}><Text style={styles.textLogin}>Login</Text></TouchableOpacity>
+      <Text style={styles.newaccount} onPress={() => navigation.navigate('SignUp')}>Não tem uma conta? Crie uma agora</Text>
     </Animated.ScrollView>
   );
 }
@@ -70,4 +71,10 @@ const styles = StyleSheet.create({
       fontSize: 16,
       color : '#fff',
     },
+    newaccount: {
+      fontSize: 15,
+      marginTop: 12,
+      textAlign: 'center',
+      color: '#fff'
+    }
 })

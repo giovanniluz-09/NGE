@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         color : '#fff',
     },
     acount: {
-        fontSize: 16,
+        fontSize: 15,
         padding: 10,
         color: '#fff'
     }

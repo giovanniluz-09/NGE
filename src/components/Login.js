@@ -1,4 +1,4 @@
-import { TextInput, StyleSheet, TouchableOpacity, Text, ScrollView, Animated, useState, useEffect } from "react-native";
+import { TextInput, StyleSheet, TouchableOpacity, Text, ScrollView } from "react-native";
 import React from 'react';
 import Logo from "./Logo.js";
 import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
@@ -9,7 +9,7 @@ export default function Login({ navigation }) {
  })
   //Adição dos botões para navegação entre telas, sendo utilizado o "TouchableOpacity" para colocar o "OnPress" - Nicolas Santos
   return (
-    <Animated.ScrollView contentContainerStyle={styles.container}>
+    <ScrollView contentContainerStyle={styles.container} keyboardDismissMode="none">
       <Logo />
       <TextInput style={styles.input} placeholder="Email" placeholderTextColor={"white"} />
       <TextInput style={styles.input} placeholder="Senha" placeholderTextColor={"white"} />
@@ -17,8 +17,8 @@ export default function Login({ navigation }) {
         <Text 
         style={styles.textLogin}> Login </Text>
         </TouchableOpacity>
-      <Text style={styles.newaccount} onPress={() => navigation.navigate('SignUp')}> Não tem uma conta? <Text style={{fontWeight: 'bold'}}>Crie uma agora</Text> </Text>
-    </Animated.ScrollView>
+      <Text style={styles.newaccount} onPress={() => navigation.navigate('SignUp')}> Não tem uma conta? <Text style={{fontWeight: 'bold'}}> Crie uma agora </Text> </Text>
+    </ScrollView>
   );
 }
 
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
       fontFamily: 'Poppins_400Regular',
     },
     newaccount: {
-      fontSize: 15,
+      fontSize: 16,
       marginTop: 20,
       textAlign: 'center',
       color: '#fff',

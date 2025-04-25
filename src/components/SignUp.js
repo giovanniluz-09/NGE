@@ -1,4 +1,4 @@
-import { Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Button } from 'react-native';
+import { Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidView } from 'react-native';
 import Logo from './Logo.js';
 
 
@@ -6,7 +6,7 @@ export default function SignUp({ navigation }) {
 
     //Adição dos botões para navegação entre telas, sendo utilizado o "TouchableOpacity" para colocar o "OnPress" - Nicolas Santos
     return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView contentContainerStyle={styles.container} >
     <Logo />
     <Text style={styles.title}>Criar minha Conta</Text>
     <TextInput style={styles.input} placeholder="Digite seu Nome *" placeholderTextColor={"white"} />
@@ -21,10 +21,10 @@ export default function SignUp({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#0C1E34',
         flex: 1,
+        backgroundColor: '#0C1E34',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
       },  
       button: {
         backgroundColor: 'none',

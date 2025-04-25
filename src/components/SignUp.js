@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginTop: 25,
         marginBottom: 8,
+        fontFamily: 'Poppins_400Regular',
     },
     input: {
         padding: 16,
@@ -48,6 +49,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         color: '#fff',
         borderColor: '#fff',
+        fontFamily: 'Poppins_400Regular',
     },
     cadastro: {
         alignSelf: 'center',
@@ -70,14 +72,12 @@ const styles = StyleSheet.create({
     textCadastro: {
         fontSize: 25,
         fontWeight: '400',
-    },
-    textLogin: {
-        fontSize: 16,
-        color : '#fff',
+        fontFamily: 'Poppins_400Regular',
     },
     acount: {
         fontSize: 15,
         padding: 10,
-        color: '#fff'
+        color: '#fff',
+        fontFamily: 'Poppins_400Regular',
     }
 });

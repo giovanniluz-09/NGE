@@ -1,20 +1,22 @@
-import { Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, View, Image } from 'react-native';
 
 export default function Card({ navigation }){
     return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
     <Text style={styles.title}>Área de Cartões</Text>
     <Image style={styles.card} source={require('../../assets/cartao_erik.png')} />
-    <Text sytle={styles.voltar} onPress={() => navigation.navigate('SignUp')}> Voltar</Text>
-    </ScrollView>
+    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text style={styles.back}>Voltar</Text>
+    </TouchableOpacity> 
+    </View>
     )
 }
 
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#223245',
         flex: 1,
+        backgroundColor: '#223245',
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -23,16 +25,18 @@ const styles = StyleSheet.create({
         height: 500,
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 10
+        margin: 20
     },
     title: {
         color: '#fff',
         fontSize: 20,
         margin: 20,
+        fontFamily: 'Poppins_400Regular',
     },
-    voltar: {
+    back: {
         color: '#fff',
-        fontSize: 21,
+        fontSize: 19,
+        fontFamily: 'Poppins_400Regular',
     }
 })
 

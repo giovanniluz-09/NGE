@@ -1,5 +1,5 @@
 import { TextInput, StyleSheet, TouchableOpacity, Text, ScrollView, Keyboard } from "react-native";
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from "./Logo.js";
 import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
 
@@ -7,7 +7,7 @@ export default function Login({ navigation }) {
  const [fontsLoaded] = useFonts({
   Poppins_400Regular
  })
-  //Adição dos botões para navegação entre telas, sendo utilizado o "TouchableOpacity" para colocar o "OnPress" - Nicolas Santos
+  
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Logo />
@@ -69,7 +69,7 @@ let styles = StyleSheet.create({
       fontFamily: 'Poppins_400Regular',
     },
     newaccount: {
-      fontSize: 16,
+      fontSize: 15,
       marginTop: 20,
       textAlign: 'center',
       color: '#fff',

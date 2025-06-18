@@ -1,34 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack'; 
+import { useFonts ,Poppins_400Regular } from '@expo-google-fonts/poppins';
 import Login from './src/components/Login.js';
 import SignUp from './src/components/SignUp.js';
+import Card from './src/components/Card.js';
+
+
+const Stack = createStackNavigator();
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Poppins_400Regular
+  });
+
   return (
-    <View style={styles.container}>
-      <Login />
-      <StatusBar style="light" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator inicialRouteName="Login">
+      <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+      <Stack.Screen name="Card" component={Card} options={{ headerShown: false}} />
+      <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#0C1E34',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    color: '#fff',
-    fontSize: 120,
-    fontWeight: 'bold',
-    fontFamily: 'Poppins',
-  },
-  subtitle: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
-    fontFamily: 'Poppins',
-  },
-});

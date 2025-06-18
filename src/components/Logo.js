@@ -1,4 +1,5 @@
-import { Text, StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+
 
 export default function Logo() {
   return (
@@ -12,7 +13,7 @@ export default function Logo() {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
     logo: {
         width: 176,
         height: 80,
@@ -22,7 +23,8 @@ const styles = {
         color: '#fff',
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: 'Poppins',
         textAlign: 'center',
-    },
-    };
+        marginBottom: 20,
+        fontFamily: 'Poppins_400Regular',
+    }
+});

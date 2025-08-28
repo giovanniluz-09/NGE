@@ -4,6 +4,7 @@ import { useFonts ,Poppins_400Regular } from '@expo-google-fonts/poppins';
 import Login from './src/components/Login.js';
 import SignUp from './src/components/SignUp.js';
 import Card from './src/components/Card.js';
+import "./global.css"
 
 
 const Stack = createStackNavigator();

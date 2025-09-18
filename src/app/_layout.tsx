@@ -4,8 +4,9 @@ import "../styles/global.css";
 export default function RootLayout() {
   return (
     <Stack>
-      <Stack.Screen name="login" options={{ title: "Login" }}/>
-      <Stack.Screen name="register" options={{ title: "Register" }}/>
+      <Stack.Screen name="login"/>
+      <Stack.Screen name="register"/>
+      <Stack.Screen name="home"/>
     </Stack>
   )
 }

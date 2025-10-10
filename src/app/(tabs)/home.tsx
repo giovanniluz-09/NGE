@@ -2,10 +2,7 @@ import WelcomeCard from '@/src/components/WelcomeCard';
 import { View } from 'react-native';
 // import ProfilePhoto from '../../../assets/images/profile_photo.png';
 
-
- 
-
-export function Home(){
+export default function Home(){
 
     {/* Dados do usuário (posteriormente deverá ser coletado diretamente do banco de dados) */}
     

@@ -18,8 +18,7 @@ export default function TabsLayout() {
             options={{
                 title: 'Home',
             }}
-            
-            
+
         />
 
         </Tabs>

@@ -3,8 +3,6 @@ import { router } from 'expo-router';
 import { useEffect } from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
 
-
-
 export default function Index() {
   const [fontLoaded] = useFonts({
     Poppins_400Regular,
@@ -12,15 +10,11 @@ export default function Index() {
 
   useEffect(() => {
     if(fontLoaded) {
-
       setTimeout(() => {
         router.replace('/(auth)/login');
       }, 500);
-
     } 
   },[fontLoaded]);
-
-  
 
   if (!fontLoaded) {
       return (
@@ -37,6 +31,7 @@ export default function Index() {
       <ActivityIndicator size="large" color="#ffffff" />
       <Text className="text-white text-2xl font-bold mt-4">
         Bem-vindo!
+        aaaaa
       </Text>
     </View>
   );

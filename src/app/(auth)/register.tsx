@@ -8,7 +8,7 @@ import {
     View,
 } from 'react-native';
 
-export function Register(){
+export default function Register(){
 
     return(
         <KeyboardAvoidingView
@@ -16,9 +16,7 @@ export function Register(){
                     className='flex-1'
                 >
     
-    <View className= 'bg-primary flex-1 justify-center items-center'>
-
-        
+    <View className= 'bg-primary flex-1 justify-center items-center'>      
         <Image
             source={require('../../../assets/images/logo_nge.png')}
         />
